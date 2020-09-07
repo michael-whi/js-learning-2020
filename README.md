@@ -1,6 +1,6 @@
 # js-learning-classes-course
 
-Choosing between a fucnction and a class we should consider them like a choice between stateless and stateful components, where a fucnction is stateless, meanwhile a class is statteful.
+Choosing between a fucnction and a class we should consider them like a choice between stateless and stateful components, where a fucnction is stateless, while a class is statteful.
 
 fucntions vs. classes diffs
 
