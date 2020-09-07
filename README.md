@@ -4,10 +4,10 @@ Choosing between a fucnction and a class we should consider them like a choice b
 
 fucntions vs. classes diffs
 
-Fucntions | Classes
-___________________
-Hoisted | Not hoisted
-Can be overwritten | Can't be overwritten
+|Fucntions | Classes|
+|-|-|
+|Hoisted | Not hoisted|
+|Can be overwritten | Can't be overwritten|
 
 Static methods can be called only from a class directly (not from an instance).
 
