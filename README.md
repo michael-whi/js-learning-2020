@@ -1,1 +1,1 @@
-# js-learning-classes-cource
+# js-learning-classes-course
