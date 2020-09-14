@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        let person = {
+            first: 'Mike',
+            actions: ['bike', 'hike', 'surf', 'ski'],
+            printActionOldStyle: function(){
+                //var _this = this
+                this.actions.forEach(function(action){
+                    //error due to 'this' is undefined
+                    //we might work around it to define
+                    //above forEach a var _this = this
+                    
+                    //another way is to bind forEach(...).bind(this)
+
+                    //console.log(this.first + 'likes to' + action);
+                });
+            },
+            printActionNew: function(){
+                this.actions.forEach(action => {
+                    console.log(this.first + 'likes to' + action);
+                });
+            },
+            //this will be undefined in strict mode
+            printActionArrow: () => {console.log(this)}
+        }
+        person.printActionOldStyle();
+        person.printActionNew();
+        person.printActionArrow();
+    </script>
+</head>
+<body>
+    <section>
+
+    </section>
+</body>
+</html>
