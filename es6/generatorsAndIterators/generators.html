@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function* abc(){
+            yield 'a';
+            yield 'b';
+            yield 'c';
+        }
+
+        let res = abc()
+        console.log(res);
+
+        console.log(res.next());
+        console.log(res.next());
+        console.log(res.next());
+        console.log(res.next());
+
+        function* listLetters(arr){
+            for(let i=0; i < arr.length; i++){
+                yield arr[i];
+            }
+        }
+
+        let letters = listLetters(['a', 'b', 'c']);
+
+        let showLetters = setInterval(function(){
+            let res = letters.next();
+            if(res.done){
+                clearInterval(showLetters);
+                console.log("We're done");
+            }else{
+                console.log(res.value);
+            }
+        }, 1500)
+
+    </script>
+</head>
+<body>
+    <section>
+
+    </section>
+</body>
+</html>

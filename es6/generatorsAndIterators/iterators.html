@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function myIterator(arr){
+            let nextIndex = 0;
+            return {
+                next(){
+                    if(nextIndex < arr.length){
+                        return { done: false, value: arr.shift() }
+                    }else{
+                        return { done: true }
+                    }
+                }
+            }
+        }
+
+        let a = myIterator([1,2]);
+        console.log(a.next().value)
+        console.log(a.next().value)
+        console.log(a.next().value)
+
+    </script>
+</head>
+<body>
+    <section>
+
+    </section>
+</body>
+</html>
