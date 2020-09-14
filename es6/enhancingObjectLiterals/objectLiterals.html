@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        let cat = {
+            meow: function (times) {
+                //old way
+                console.log(Array(times).join('meow'));
+                //es6 way
+                console.log('meow'.repeat(4));
+            }
+        }
+
+        cat.meow(4);
+    </script>
+</head>
+<body>
+    <section>
+
+    </section>
+</body>
+</html>
