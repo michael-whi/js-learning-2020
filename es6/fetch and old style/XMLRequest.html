@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+    const spacePeople = () => {
+        return new Promise((onFulfill, onReject) => {
+            const api = 'http://api.open-notify.org/astros.json';
+            const request = new XMLHttpRequest()
+            request.open('GET', api);
+            request.onload = () => {
+                if(request.status === 200){
+                    const result = JSON.parse(request.response);
+                    onFulfill(result);
+                }else{
+                    onReject(new Error(request.statusText));
+                }
+            }
+            request.onerror = err => onReject(err);
+            request.send();
+        });
+    }
+
+    spacePeople().then(
+        spaceData => console.log(spaceData), 
+        err => console.log(err)
+    );
+
+    </script>
+</head>
+<body>
+    <section>
+
+    </section>
+</body>
+</html>

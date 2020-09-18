@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+    const delay = seconds => {
+        return new Promise(resolve => {
+            setTimeout(resolve, seconds * 1000)
+        });
+    }
+
+    const count = async() => {
+        console.log('1');
+        await delay(1);
+        console.log('2');
+        await delay(1);
+        console.log('3');
+        await delay(1);
+        console.log('4');
+        await delay(2);
+
+    }
+
+    count();
+
+    </script>
+</head>
+<body>
+    <section>
+
+    </section>
+</body>
+</html>

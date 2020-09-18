@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+    const api = 'http://api.open-notify.org/astros.json';
+
+    fetch(api).then(
+        res => res.json()
+    ).then(
+        spaceData => console.log(spaceData)
+    );
+
+    </script>
+</head>
+<body>
+    <section>
+
+    </section>
+</body>
+</html>
